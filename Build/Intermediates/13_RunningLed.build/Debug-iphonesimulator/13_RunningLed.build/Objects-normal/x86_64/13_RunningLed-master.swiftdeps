@@ -1,0 +1,6 @@
+version: "Apple Swift version 2.2 (swiftlang-703.0.18.8 clang-703.0.31)"
+options: "0e13e8b5a40851a4949dd4713a7e2e1c"
+build_time: [524877573, 633744000]
+inputs:
+  "/Users/buiduyhien/Documents/IOS-Swift/13_RunningLed/13_RunningLed/ViewController.swift": [524877572, 0]
+  "/Users/buiduyhien/Documents/IOS-Swift/13_RunningLed/13_RunningLed/AppDelegate.swift": [524632756, 0]
