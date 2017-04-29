@@ -28,7 +28,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     var count: Int = 0
     
-    var timer = NSTimer()
+    var timer = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -129,12 +129,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     // return de ket thuc keyboard
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return false
     }
     
-    @IBAction func action_NhapSoLuongBall(sender: UIButton) {
+    @IBAction func action_NhapSoLuongBall(_ sender: UIButton) {
         
         nhang = Int(textFiled.text!)!
         ncot = Int(textFiled.text!)!
@@ -146,7 +146,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // Ve bong moi
         drawRowOfBall() // chay den Led tu trai qua phai
         //drawRowOfBal2l() // chay den Led tu phai qua trai
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(runningLedOfMatrix), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(runningLedOfMatrix), userInfo: nil, repeats: true)
     }
     
     // chay den Led tu trai qua phai
@@ -159,7 +159,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 let image = UIImage(named: "ball_green.png")
                 let ball = UIImageView(image: image)
                 // 60 la khoang cach cua o textField
-                ball.center = CGPointMake(margin + CGFloat(i) * spaceBetweenOfBall_Column(), margin + 60 + CGFloat(j) * spaceBetweenOfBall_Row())
+                ball.center = CGPoint(x: margin + CGFloat(i) * spaceBetweenOfBall_Column(), y: margin + 60 + CGFloat(j) * spaceBetweenOfBall_Row())
                 ball.tag = 100 + dem
                 print(ball.tag)
                 dem += 1
@@ -180,7 +180,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 let image = UIImage(named: "ball_green.png")
                 let ball = UIImageView(image: image)
                 // 60 la khoang cach cua o textField
-                ball.center = CGPointMake(margin + CGFloat(i) * spaceBetweenOfBall_Column(), margin + 60 + CGFloat(j) * spaceBetweenOfBall_Row())
+                ball.center = CGPoint(x: margin + CGFloat(i) * spaceBetweenOfBall_Column(), y: margin + 60 + CGFloat(j) * spaceBetweenOfBall_Row())
                 ball.tag = 100 + dem
                 print(ball.tag)
                 dem += 1
