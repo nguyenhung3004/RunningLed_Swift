@@ -15,6 +15,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     var margin: CGFloat = 30 // le
     var lastOnLed = -1
     
+    
+    
+    
+    
+    
     // 4 bien danh dau 4 goc cua ma tran
     var ihang: Int = 0
     var icot: Int = 0
